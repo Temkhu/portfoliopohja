@@ -1,0 +1,285 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'monaco', 'Consolas', 'Lucida Console', monospace;
+  color: #263238;
+}
+
+section{
+  min-height: 110vh;
+  display: flex;
+  place-items: center;
+}
+
+body {
+  background: whitesmoke;
+  transition: background-color 0.3s ease;
+}
+
+h1 {
+  font: inherit;
+  font-size: 200px;
+}
+
+img {
+  margin-top: 55px;
+  padding-left: 20px;
+  border-radius: 25%;
+  width: 70%;
+  height: 70%;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: 60px;
+  z-index: 100;
+  background-color: antiquewhite;
+  transition: top 0.3s;
+  transition: background-color 0.3s ease;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #263238;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
+}
+
+nav ul li a {
+  color: #263238;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+nav ul li a::after {
+  content: '';
+  width: 0;
+  height: 3px;
+  background: #263238;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
+
+.tumma {
+  background-color: rgb(22, 22, 22);
+  color: rgb(87, 87, 87);
+}
+
+.tumma .navbar {
+  background-color: rgb(71, 70, 70);
+  color: rgb(87, 87, 87);
+}
+
+#yo {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #263238;
+  font-size: 18px;
+  font-family: 'monaco', 'Consolas', 'Lucida Console', monospace;
+  padding: 14px 16px;
+  font-family: inherit;
+  margin: 0;
+  cursor: pointer;
+}
+
+#yo:hover {
+  display: block;
+}
+
+#yo ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
+}
+
+#yo ul li a {
+  color: #263238;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+}
+
+#yo ul li a:hover::after {
+  width: 100%;
+}
+
+#yo ul li a::after {
+  content: '';
+  width: 0;
+  height: 3px;
+  background: #263238;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
+
+h2 {
+  font-size: 120px;
+  font-family: 'monaco', 'Consolas', 'Lucida Console', monospace;
+  margin-left: 50px;
+  line-height: 100px;
+  padding-top: 25px;
+
+
+}
+h3  {
+  font-size: 30px;
+  font-family: 'monaco', 'Consolas', 'Lucida Console', monospace;
+  margin-left: 50px;
+  line-height: 100px;
+}
+
+h5 {
+  font-size: 55px;
+  font-family: 'monaco', 'Consolas', 'Lucida Console', monospace;
+  margin-left: 50px;
+  margin-top: 100px;
+  line-height: 5px;
+}
+.piilo{
+
+  opacity: 0;
+  filter: blur(20px);
+  transform: translateX(-100%);
+  transition: all 2s;
+  display: flex;
+  flex-wrap: wrap;
+  }
+  .show{
+  opacity: 1;
+  filter:blur(0);
+  transform: translateX(0);
+  }
+
+p{
+  margin-top: 1px;
+  margin-left: 50px;
+  font-size: 25px;
+}
+.Info {
+  display: inline-block;
+  text-align: left;
+  width: 60%;
+  background-color: inherit;
+  height: inherit;
+  font-family: 'monaco', 'Consolas', 'Lucida Console', monospace;
+  order: 1;
+  padding-top: 100px;
+
+}
+.Info2{
+  display: inline-block;
+  width: 40%;
+  background-color: inherit;
+  text-align: left;
+  font-family: 'monaco', 'Consolas', 'Lucida Console', monospace;
+  order: 2;
+  padding-top: 100px;
+}
+
+.kuva{
+  display: inline-block;
+  margin-top: 50px;
+  text-align: center;
+  width: 30%;
+}
+.text{
+  display: inline-block;
+  text-align: center;
+  width: 70%;
+
+}
+
+.logo{
+background-color: inherit;
+width: 200px;
+height: 200px;
+order: 2;
+}
+.logo img{
+  width: 100%;
+  height: auto;
+}
+
+ul.no-bullets{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-left: 50px;
+  font-size: 25px;
+}
+.contact{
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: inherit;
+  width: 50%;
+  font-family: 'monaco', 'Consolas', 'Lucida Console', monospace;
+  order: 1;
+}
+.contact h3{
+  font-size: 50px;
+}
+
+@media(max-width: 768px){
+  .piilo{
+    transition: none;
+  }
+h2{
+  font-size: 40px;
+  line-height: 50px;
+}
+img{
+  height: auto;
+  width: 90%;
+}
+h5{
+  font-size: 25px;
+  line-height: 20px;
+}
+.Info, .Info2 {
+  width: 100%;
+  order: 0;
+  padding-top: 100px;
+}
+.contact h2{
+  font-size: 50px;
+  padding-top: 55px;
+}
+.contact h3{
+  font-size: 25px;
+  line-height: 25px;
+  width: 25%;
+}
+.contact{
+  width: 100%;
+  height: auto;
+  text-align: left;
+}
+.logo{
+  width: 50%;
+  height: auto;
+}
+.navbar{
+  height: 80px;
+}
+}
